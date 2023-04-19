@@ -136,7 +136,7 @@ h1 {
 
 .parrafosHome {
     background-color: #69dfd2;
-    height: 500px;
+    height: auto;
     width: auto;
     margin: 35px 35px 35px 35px;
     text-align: left;
@@ -309,7 +309,7 @@ hr {
     padding: 50px 50px 50px 50px;
 }
 
-.datosPedidos{
+.datosPedidos {
     display: flex;
     align-items: center;
     text-align: center;
@@ -322,13 +322,13 @@ hr {
     padding: 6px;
 }
 
-.datosIngresados{
+.datosIngresados {
     text-align: center;
     border: #000000 solid 3px;
     border-radius: 10px;
 }
 
-.boton{
+.boton {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -381,7 +381,7 @@ hr {
     align-items: center;
 }
 
-/* JQuery 320px - inicio */
+/*JQuery 320px - inicio*/
 @media only screen and (max-width: 320px) {
     .encabezado {
         height: 40px;
@@ -413,8 +413,14 @@ hr {
         font-size: 38px;
     }
 
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        margin: -15px 0.4rem;
+    }
+
     .parrafosHome {
-        height: 780px;
+        height: auto;
         width: auto;
         margin: 15px;
         text-align: left;
@@ -489,7 +495,7 @@ hr {
         padding: 2px 4px 2px 4px;
         margin: 10px 0px 10px 0px;
     }
-    
+
     h2 {
         font-size: 18px;
         padding: 6px;
@@ -497,12 +503,12 @@ hr {
 
     .img {
         height: 135px;
-        width: auto; 
+        width: auto;
         border: #69dfd2 solid 5px;
         transition: all 1.0s;
     }
 
-    .mainContacto{
+    .mainContacto {
         width: 95%;
         padding: 5px 10px 5px 10px;
     }
@@ -530,4 +536,160 @@ hr {
         border: black solid 2px;
     }
 }
-/* JQuery 320px - final */
+/*JQuery 320px - final*/
+
+/*JQuery 480px - inicio*/
+@media only screen and (min-width: 321px) and (max-width: 480px) {
+    .encabezado {
+        height: 50px;
+    }
+
+    .logoTop {
+        height: 95px;
+    }
+
+    .nombre {
+        font-size: 40px;
+        margin-left: 105px;
+    }
+
+    .navbar {
+        margin-top: 10px;
+        height: 35px;
+    }
+
+    .navbar-toggler {
+        font-size: 15px;
+        border-radius: 6px;
+        margin: -5px;
+    }
+
+    h1 {
+        margin-top: 10px;
+        font-size: 55px;
+    }
+
+    .carousel-indicators li {
+        width: 10px;
+        height: 10px;
+        margin: -15px 0.4rem;
+    }
+
+    .parrafosHome {
+        height: auto;
+        width: auto;
+        margin: 20px;
+        text-align: left;
+        padding: 15px;
+    }
+
+    p {
+        align-items: center;
+        font-size: 15px;
+        font-family: alkatra;
+    }
+
+    .gridProductos {
+        grid-template-columns: 1fr;
+        grid-template-rows: 390px 270px 20px 390px 340px 20px 390px 300px 20px 390px 300px;
+        grid-template-areas:
+            "img1"
+            "detail1"
+            "line1"
+            "img2"
+            "detail2"
+            "line2"
+            "img3"
+            "detail3"
+            "line3"
+            "img4"
+            "detail4";
+        padding: 10px;
+        margin: 0px 0px 10px 0px;
+        gap: 10px;
+    }
+
+    .gridTaller {
+        grid-template-columns: 1fr;
+        grid-template-rows: 390px 330px 20px 390px 380px 20px 390px 420px;
+        grid-template-areas:
+            "img1"
+            "detail1"
+            "line1"
+            "img2"
+            "detail2"
+            "line2"
+            "img3"
+            "detail3";
+        padding: 10px;
+        margin-bottom: 10px;
+        gap: 10px;
+    }
+
+    .gridGaleria {
+        display: grid;
+        width: 95%;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 190px 190px 190px;
+        grid-template-areas:
+            "img1 img2"
+            "img3 img4"
+            "img5 img6";
+        gap: 25px;
+        margin: 20px 0px 20px 14px;
+    }
+
+    .imagen {
+        width: 85%;
+        height: auto;
+    }
+
+    .detalle {
+        width: 100%;
+        height: auto;
+        font-size: 12px;
+        padding: 6px 8px 6px 8px;
+        margin: 15px 0px 15px 0px;
+    }
+
+    h2 {
+        font-size: 24px;
+        padding: 6px;
+    }
+
+    .img {
+        height: 190px;
+        width: auto;
+        border: #69dfd2 solid 6px;
+        transition: all 1.0s;
+    }
+
+    .mainContacto {
+        width: 80%;
+        padding: 5px 10px 5px 10px;
+    }
+
+    .piePagina {
+        height: 70px;
+        margin: 0px;
+    }
+
+    .derechos {
+        font-size: 10px;
+        margin: 0px 0px 2px 2px;
+    }
+
+    .redes {
+        letter-spacing: 8px;
+        font-size: 24px;
+    }
+
+    .logoBottom {
+        height: 70px;
+        width: 70px;
+        border-radius: 35px;
+        margin-left: 130px;
+        border: black solid 3px;
+    }
+}
+/*JQuery 480px - final*/
