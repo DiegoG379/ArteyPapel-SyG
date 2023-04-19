@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shorcut icon" href="../media/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/estilos.css">
+    <title>Arte & Papel SyG</title>
+</head>
+
+<body>
+    <header class="encabezado">
+        <aside class="nombre">Arte & Papel S y G</aside>
+        <img class="logoTop" src="../media/favicon.png" alt="logo">
+    </header>
+    <!-- Barra de navegación -inicio- -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="../index.html">inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">nuestros productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="taller.html">nuestro taller</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="galeria.html">galería</a>
+                </li>
+                <li class="nav-item  mr-1">
+                    <a class="nav-link" href="contacto.html">contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Barra de navegación -final- -->
+    <main>
+        <h1>contacto</h1>
+        <div class="mainContacto container-fluid">
+            <form class="gridFormulario">
+                <div class="datosPedidos row">
+                    <label class="col-lg-5" for="nombre">Nombre y Apellido:</label>
+                    <input class="datosIngresados col-lg-5" type="text" name="nombre">
+                </div>
+                <div class="datosPedidos row">
+                    <label class="col-lg-5" for="correo">Correo electrónico:</label>
+                    <input class="datosIngresados col-lg-5" type="email" name="correo">
+                </div>
+                <div class="datosPedidos row">
+                    <label class="col-lg-5" for="menu">Tipo de evento: </label>
+                    <select class="datosIngresados col-lg-5" id="menu">
+                        <option value="opcion1">Casamiento</option>
+                        <option value="opcion2">Cumpleaños de 15</option>
+                        <option value="opcion3">Cumpleaños infantil</option>
+                        <option value="opcion4">Baby shower</option>
+                        <option value="opcion5">Aniversario</option>
+                        <option value="opcion6">Otros eventos</option>
+                    </select>
+                </div>
+                <div class="datosPedidos row">
+                    <label class="col-lg-5" for="fecha">Fecha del evento:</label>
+                    <input class="datosIngresados col-lg-5" type="date" name="fecha">
+                </div>
+                <div class="datosPedidos row">
+                    <label class="col-lg-5" for="comentario">Escriba su mensaje:</label>
+                    <textarea class="datosIngresados col-lg-5" name="comentario"></textarea>
+                </div>
+                <div class="datosPedidos row">
+                    <label class="col-lg-5" for="archivo">Inserte imagen de muestra:</label>
+                    <input class="datosIngresados col-lg-5 datoIngresado archivoI" type="file" name="archivo">
+                </div>
+                <div class="datosPedidos boton row">
+                    <button class="datosIngresados col-lg-5 boton" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer class="piePagina">
+        <p class="derechos">Diego García © 2023. Todos los derechos reservados.</p>
+        <div class="redes">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+            <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+        </div>
+        <img class="logoBottom" src="/media/Favicon.png" alt="logo">
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
+        integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>
