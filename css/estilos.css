@@ -89,7 +89,7 @@ body {
 /*Barra de navegación - final*/
 /*Header - final*/
 
-h1 {
+.titulo {
     margin: auto;
     font-family: alkatra;
     font-weight: bold;
@@ -101,6 +101,13 @@ h1 {
 }
 
 /*Carrusel - inicio*/
+
+.carousel {
+    height: auto;
+    width: 75%;
+    margin: auto;
+}
+
 .carousel-inner {
     height: auto;
     max-width: 100%;
@@ -138,13 +145,9 @@ h1 {
     background-color: #69dfd2;
     height: auto;
     width: auto;
-    margin: 35px 35px 35px 35px;
+    margin: 35px;
     text-align: left;
     padding: 30px 50px 30px 50px;
-}
-
-p {
-    align-items: center;
     font-size: 18px;
     font-family: alkatra;
     font-weight: bold;
@@ -193,8 +196,9 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 340px 340px;
     grid-template-areas:
-        "img1 img2 img3"
-        "img4 img5 img6";
+        "img1 img2 img3 img4"
+        "img5 img6 img7 img8"
+        "img9 img10 img11 img12";
     align-items: center;
     justify-self: center;
     padding: 20px;
@@ -222,6 +226,30 @@ p {
 
 .img6 {
     grid-area: img6;
+}
+
+.img7 {
+    grid-area: img7;
+}
+
+.img8 {
+    grid-area: img8;
+}
+
+.img9 {
+    grid-area: img9;
+}
+
+.img10 {
+    grid-area: img10;
+}
+
+.img11 {
+    grid-area: img11;
+}
+
+.img12 {
+    grid-area: img12;
 }
 
 .detail1 {
@@ -264,14 +292,16 @@ p {
 .detalle {
     width: auto;
     height: 300px;
-    font-size: 16px;
-    font-family: alkatra;
     background-color: #69dfd2;
     padding: 10px 20px 10px 20px;
     margin: 40px;
+    font-size: 17px;
+    font-family: alkatra;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-h2 {
+.subtitulo {
     text-align: center;
     font-size: 28px;
     font-family: alkatra;
@@ -280,7 +310,7 @@ h2 {
     text-transform: uppercase
 }
 
-hr {
+.linea {
     border: solid #69dfd2 5px;
     border-radius: 5px;
 }
@@ -381,8 +411,8 @@ hr {
     align-items: center;
 }
 
-/*JQuery 320px - inicio*/
-@media only screen and (max-width: 320px) {
+/*JQuery 368px - inicio*/
+@media only screen and (min-width: 340px) and (max-width: 400px) {
     .encabezado {
         height: 40px;
     }
@@ -408,9 +438,13 @@ hr {
         z-index: 10 !important;
     }
 
-    h1 {
+    .titulo {
         margin-top: 10px;
         font-size: 38px;
+    }
+
+    .carousel {
+        width: 100%;
     }
 
     .carousel-indicators li {
@@ -425,9 +459,6 @@ hr {
         margin: 15px;
         text-align: left;
         padding: 10px;
-    }
-
-    p {
         align-items: center;
         font-size: 13px;
         font-family: alkatra;
@@ -435,7 +466,7 @@ hr {
 
     .gridProductos {
         grid-template-columns: 1fr;
-        grid-template-rows: 280px 260px 20px 280px 320px 20px 280px 300px 20px 280px 280px;
+        grid-template-rows: auto auto 20px auto auto 20px auto auto 20px auto auto;
         grid-template-areas:
             "img1"
             "detail1"
@@ -455,7 +486,7 @@ hr {
 
     .gridTaller {
         grid-template-columns: 1fr;
-        grid-template-rows: 280px 340px 20px 280px 380px 20px 280px 420px;
+        grid-template-rows: auto auto 20px auto auto 20px auto auto;
         grid-template-areas:
             "img1"
             "detail1"
@@ -474,13 +505,16 @@ hr {
         display: grid;
         width: 95%;
         grid-template-columns: 1fr 1fr;
-        grid-template-rows: 135px 135px 135px;
+        grid-template-rows: 150px 150px 150px 150px 150px 150px;
         grid-template-areas:
             "img1 img2"
             "img3 img4"
-            "img5 img6";
+            "img5 img6"
+            "img7 img8"
+            "img9 img10"
+            "img11 img12";
         gap: 15px;
-        margin: 15px 0px 15px 0px;
+        margin: auto;
     }
 
     .imagen {
@@ -494,9 +528,12 @@ hr {
         font-size: 10px;
         padding: 2px 4px 2px 4px;
         margin: 10px 0px 10px 0px;
+        align-items: center;
+        font-size: 13px;
+        font-family: alkatra;
     }
 
-    h2 {
+    .subtitulo {
         font-size: 18px;
         padding: 6px;
     }
@@ -536,160 +573,5 @@ hr {
         border: black solid 2px;
     }
 }
-/*JQuery 320px - final*/
 
-/*JQuery 480px - inicio*/
-@media only screen and (min-width: 321px) and (max-width: 480px) {
-    .encabezado {
-        height: 50px;
-    }
-
-    .logoTop {
-        height: 95px;
-    }
-
-    .nombre {
-        font-size: 40px;
-        margin-left: 105px;
-    }
-
-    .navbar {
-        margin-top: 10px;
-        height: 35px;
-    }
-
-    .navbar-toggler {
-        font-size: 15px;
-        border-radius: 6px;
-        margin: -5px;
-    }
-
-    h1 {
-        margin-top: 10px;
-        font-size: 55px;
-    }
-
-    .carousel-indicators li {
-        width: 10px;
-        height: 10px;
-        margin: -15px 0.4rem;
-    }
-
-    .parrafosHome {
-        height: auto;
-        width: auto;
-        margin: 20px;
-        text-align: left;
-        padding: 15px;
-    }
-
-    p {
-        align-items: center;
-        font-size: 15px;
-        font-family: alkatra;
-    }
-
-    .gridProductos {
-        grid-template-columns: 1fr;
-        grid-template-rows: 390px 270px 20px 390px 340px 20px 390px 300px 20px 390px 300px;
-        grid-template-areas:
-            "img1"
-            "detail1"
-            "line1"
-            "img2"
-            "detail2"
-            "line2"
-            "img3"
-            "detail3"
-            "line3"
-            "img4"
-            "detail4";
-        padding: 10px;
-        margin: 0px 0px 10px 0px;
-        gap: 10px;
-    }
-
-    .gridTaller {
-        grid-template-columns: 1fr;
-        grid-template-rows: 390px 330px 20px 390px 380px 20px 390px 420px;
-        grid-template-areas:
-            "img1"
-            "detail1"
-            "line1"
-            "img2"
-            "detail2"
-            "line2"
-            "img3"
-            "detail3";
-        padding: 10px;
-        margin-bottom: 10px;
-        gap: 10px;
-    }
-
-    .gridGaleria {
-        display: grid;
-        width: 95%;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 190px 190px 190px;
-        grid-template-areas:
-            "img1 img2"
-            "img3 img4"
-            "img5 img6";
-        gap: 25px;
-        margin: 20px 0px 20px 14px;
-    }
-
-    .imagen {
-        width: 85%;
-        height: auto;
-    }
-
-    .detalle {
-        width: 100%;
-        height: auto;
-        font-size: 12px;
-        padding: 6px 8px 6px 8px;
-        margin: 15px 0px 15px 0px;
-    }
-
-    h2 {
-        font-size: 24px;
-        padding: 6px;
-    }
-
-    .img {
-        height: 190px;
-        width: auto;
-        border: #69dfd2 solid 6px;
-        transition: all 1.0s;
-    }
-
-    .mainContacto {
-        width: 80%;
-        padding: 5px 10px 5px 10px;
-    }
-
-    .piePagina {
-        height: 70px;
-        margin: 0px;
-    }
-
-    .derechos {
-        font-size: 10px;
-        margin: 0px 0px 2px 2px;
-    }
-
-    .redes {
-        letter-spacing: 8px;
-        font-size: 24px;
-    }
-
-    .logoBottom {
-        height: 70px;
-        width: 70px;
-        border-radius: 35px;
-        margin-left: 130px;
-        border: black solid 3px;
-    }
-}
-/*JQuery 480px - final*/
+/*JQuery 368px - final*/
