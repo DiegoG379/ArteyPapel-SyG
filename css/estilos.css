@@ -6,16 +6,16 @@
 
 @font-face {
     font-family: satisfy;
-    src: url(../Media/fonts/Satisfy-Regular.ttf);
+    src: url(../media/fonts/Satisfy-Regular.ttf);
 }
 
 @font-face {
     font-family: alkatra;
-    src: url(../Media/Fonts/Alkatra-VariableFont_wght.ttf);
+    src: url(../media/fonts/Alkatra-VariableFont_wght.ttf);
 }
 
 body {
-    background-image: url(../media/fondoPantalla.jpg);
+    background-image: url(../media/wallpaper.jpg);
     background-repeat: repeat-y;
     background-size: 100% auto;
 }
