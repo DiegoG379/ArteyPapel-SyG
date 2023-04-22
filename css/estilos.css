@@ -193,8 +193,8 @@ body {
 .gridGaleria {
     display: grid;
     width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 340px 340px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 340px 340px 340px;
     grid-template-areas:
         "img1 img2 img3 img4"
         "img5 img6 img7 img8"
