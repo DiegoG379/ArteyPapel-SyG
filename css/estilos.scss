@@ -9,6 +9,33 @@ $color1: #69dfd2;
 $color2: #d1dbdd;
 $color3: black;
 
+//Mixin Grids
+@mixin grid{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 20px;
+    margin: 35px 0px 35px 0px;
+}
+//Mixin Flexbox
+@mixin flexbox($display, $justify, $align){
+    display: $display;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+//Mixin Texto
+@mixin texto($font, $size, $weight, $align, $color, $transform, $spacing){
+    font-family: $font;
+    font-size: $size;
+    font-weight: $weight;
+    text-align: $align;
+    color: $color;
+    text-transform: $transform;
+    letter-spacing: $spacing;
+}
+
+//Fuentes
 @font-face {
     font-family: satisfy;
     src: url(../media/fonts/Satisfy-Regular.ttf);
@@ -39,19 +66,17 @@ body {
     position: absolute;
     top: 0px;
     left: 0px;
+    background-color: $color2;
     border: $color3 solid 5px;
     border-radius: 97px;
-    margin: 3px 0px 0px 3px;
-    padding: 3px;
+    margin: 1px 0px 0px 1px;
+    padding: 5px;
 }
 
 .nombre {
-    font-family: satisfy;
-    font-weight: bold;
-    font-size: 72px;
-    text-align: left;
-    letter-spacing: -1px;
     margin-left: 270px;
+    text-shadow: 5px 5px 3px $color2;
+    @include texto(satisfy, 72px, bold, left, $color3, none, -1px);
 }
 /*Header - final*/
 /*Barra de navegación - inicio*/
@@ -64,21 +89,17 @@ body {
 }
 
 .nav-link {
-    color: $color3 !important;
     margin: 4px;
-    text-transform: capitalize;
-    font-family: alkatra;
-    font-size: 20px;
-    font-weight: bold;
+    padding: 3px;
     border-radius: 6px;
     border: solid 3px $color3;
     background-color: $color2;
-    text-align: center;
-    padding: 3px;
+    @include texto(alkatra, 20px, bold, center, $color3 !important, capitalize, 0px);
 }
 
 .nav-link:hover {
-    color: white !important;
+    color: $color1 !important;
+    background-color: $color3;
 }
 
 .navbar-toggler {
@@ -90,7 +111,7 @@ body {
 }
 
 .fa-bars:hover {
-    color: white;
+    color: $color1;
 }
 
 /*Barra de navegación - final*/
@@ -98,13 +119,8 @@ body {
 
 .titulo {
     margin: auto;
-    font-family: alkatra;
-    font-weight: bold;
-    font-size: 100px;
-    text-align: center;
-    text-transform: uppercase;
-    text-shadow: 10px 0px 7px #000000;
-    color: $color1;
+    text-shadow: 10px 0px 7px $color3;
+    @include texto(alkatra, 100px, bold, center, $color1, uppercase, 0px);
 }
 
 /*Carrusel - inicio*/
@@ -149,27 +165,15 @@ body {
 /*Carrusel - final*/
 
 .parrafosHome {
-    background-color: $color1;
     height: auto;
     width: auto;
+    background-color: $color1;
     margin: 35px;
-    text-align: left;
     padding: 30px 50px 30px 50px;
-    font-size: 18px;
-    font-family: alkatra;
-    font-weight: bold;
-    letter-spacing: 1px;
+    @include texto(alkatra, 20px, bold, left, $color3, none, 1px);
 }
 
 /*Secciones Nuestros Productos y Nuestro Taller - Inicio*/
-
-@mixin grid{
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 20px;
-    margin: 35px 0px 35px 0px;
-}
 
 .gridProductos {
     @include grid;
@@ -195,48 +199,24 @@ body {
         "detail3 detail3 img3";
 }
 
-.img1 {
-    grid-area: img1;
+//Bucle para crear areas del Grid
+
+@for $i from 1 through 4 {
+    .img#{$i} {
+        grid-area: img#{$i};
+    }
 }
 
-.img2 {
-    grid-area: img2;
+@for $i from 1 through 4 {
+    .detail#{$i} {
+        grid-area: detail#{$i};
+    }
 }
 
-.img3 {
-    grid-area: img3;
-}
-
-.img4 {
-    grid-area: img4;
-}
-
-.detail1 {
-    grid-area: detail1;
-}
-
-.detail2 {
-    grid-area: detail2;
-}
-
-.detail3 {
-    grid-area: detail3;
-}
-
-.detail4 {
-    grid-area: detail4;
-}
-
-.line1 {
-    grid-area: line1;
-}
-
-.line2 {
-    grid-area: line2;
-}
-
-.line3 {
-    grid-area: line3;
+@for $i from 1 through 3 {
+    .line#{$i} {
+        grid-area: line#{$i};
+    }
 }
 
 .imagen {
@@ -244,8 +224,7 @@ body {
     height: auto;
     border-radius: 10px;
     border: $color1 solid 5px;
-    justify-self: center;
-    align-self: center;
+    margin: auto;
 }
 
 .detalle {
@@ -254,19 +233,12 @@ body {
     background-color: $color1;
     padding: 10px 20px 10px 20px;
     margin: 40px;
-    font-size: 17px;
-    font-family: alkatra;
-    font-weight: bold;
-    letter-spacing: 1px;
+    @include texto(alkatra, 20px, bold, left, $color3, none, 1px);
 }
 
 .subtitulo {
-    text-align: center;
-    font-size: 28px;
-    font-family: alkatra;
-    font-weight: bold;
     padding: 10px;
-    text-transform: uppercase;
+    @include texto(alkatra, 30px, bold, center, $color3, uppercase, opx);
 }
 
 .linea {
@@ -298,64 +270,52 @@ body {
     width: 50%;
     margin: 40px auto;
     text-align: center;
-    padding: 50px 50px 50px 50px;
+    padding: 50px;
 }
 
 .datosPedidos {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    font-size: 16px;
-    font-family: alkatra;
     border: solid $color3 5px;
     border-radius: 10px;
     background-color: $color2;
     margin: 15px 10px 15px 10px;
-    padding: 6px;
+    padding: 5px;
+    @include flexbox(flex, center, center);
+    @include texto(alkatra, 16px, none, center, $color3, none, 0px);
 }
 
 .datosIngresados {
     text-align: center;
-    border: #000000 solid 3px;
+    border: $color3 solid 3px;
     border-radius: 10px;
 }
 
 .boton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(flex, center, center);
 }
 
 /*Footer - inicio*/
 .piePagina {
-    display: flex;
-    justify-content: space-between;
     height: 100px;
     width: 100%;
     background-color: $color1;
     margin-top: 10px;
+    @include flexbox(flex, space-between, none);
 }
 
 .derechos {
-    display: flex;
-    justify-content: left;
-    align-items: end;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: alkatra;
     margin: 0px 0px 15px 15px;
+    @include flexbox(flex, left, end);
+    @include texto(alkatra, 18px, bold, center, $color3, none, 0px);
 }
 
 .redes {
     font-size: 40px;
     letter-spacing: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexbox(flex, center, center);
 }
 
 .redes a {
-    color: #000000;
+    color: $color3;
 }
 
 .redes a:hover {
@@ -363,18 +323,25 @@ body {
 }
 
 .logoBottom {
-    margin: 0px 3px 3px 250px;
+    margin: 0px 2px 2px 250px;
     height: 98px;
     width: auto;
     border: $color3 solid 5px;
     border-radius: 49px;
-    padding: 3px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    background-color: $color2;
+    padding: 4px;
+    @include flexbox(flex, flex-end, center);
 }
 /*Footer - final*/
 /*Responsive - inicio*/
+
+//Mixin GRid Responsive
+@mixin gridResponsive{
+    padding: 10px;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
 /*JQuery 320px - inicio*/
 @media only screen and (max-width: 320px) {
     .encabezado {
@@ -439,9 +406,7 @@ body {
             "line3"
             "img4"
             "detail4";
-        padding: 10px;
-        margin: 0px 0px 10px 0px;
-        gap: 10px;
+        @include gridResponsive;
     }
 
     .gridTaller {
@@ -456,9 +421,7 @@ body {
             "line2"
             "img3"
             "detail3";
-        padding: 10px;
-        margin-bottom: 10px;
-        gap: 10px;
+        @include gridResponsive;
     }
 
     .imagen {
@@ -572,9 +535,7 @@ body {
             "line3"
             "img4"
             "detail4";
-        padding: 10px;
-        margin: 0px 0px 10px 0px;
-        gap: 10px;
+        @include gridResponsive;
     }
 
     .gridTaller {
@@ -589,9 +550,7 @@ body {
             "line2"
             "img3"
             "detail3";
-        padding: 10px;
-        margin-bottom: 10px;
-        gap: 10px;
+        @include gridResponsive;
     }
 
     .imagen {
@@ -700,9 +659,7 @@ body {
             "img3 detail3"
             "line3 line3"
             "detail4 img4";
-        padding: 10px;
-        margin: 0px 0px 10px 0px;
-        gap: 10px;
+        @include gridResponsive;
     }
 
     .gridTaller {
@@ -714,9 +671,7 @@ body {
             "img2 detail2"
             "line2 line2"
             "detail3 img3";
-        padding: 10px;
-        margin: 0px 0px 10px 0px;
-        gap: 10px;
+        @include gridResponsive;
     }
 
     .imagen {
