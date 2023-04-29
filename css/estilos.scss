@@ -10,22 +10,29 @@ $color2: #d1dbdd;
 $color3: black;
 
 //Mixin Grids
-@mixin grid{
+@mixin grid {
     display: grid;
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 20px;
     margin: 35px 0px 35px 0px;
 }
+
 //Mixin Flexbox
-@mixin flexbox($display, $justify, $align){
+@mixin flexbox($display, $justify, $align) {
     display: $display;
     justify-content: $justify;
     align-items: $align;
 }
 
+//Mixin tamaños
+@mixin sizes($height, $width){
+    height: $height;
+    width: $width;
+}
+
 //Mixin Texto
-@mixin texto($font, $size, $weight, $align, $color, $transform, $spacing){
+@mixin texto($font, $size, $weight, $align, $color, $transform, $spacing) {
     font-family: $font;
     font-size: $size;
     font-weight: $weight;
@@ -46,23 +53,28 @@ $color3: black;
     src: url(../media/fonts/Alkatra-VariableFont_wght.ttf);
 }
 
+//Cambio de fondo segun ancho de pantalla
+$horizontal: url(../media/wallpaperHorizontal.jpg);
+$vertical: url(../media/wallpaperVertical.jpg);
+
 body {
-    background-image: url(../media/wallpaper.jpg);
     background-repeat: repeat-y;
     background-size: 100% auto;
+    background-image: $vertical;
+
+    @media (min-width: 800px) {
+        background-image: $horizontal;
+    }
 }
 
 /*Header - inicio*/
 .encabezado {
-    height: 100px;
-    width: 100%;
     background-color: $color1;
+    @include sizes(100px, 100%);
 }
 
 .logoTop {
     z-index: 30;
-    height: 194px;
-    width: auto;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -71,6 +83,7 @@ body {
     border-radius: 97px;
     margin: 1px 0px 0px 1px;
     padding: 5px;
+    @include sizes(194px, auto);
 }
 
 .nombre {
@@ -78,6 +91,7 @@ body {
     text-shadow: 5px 5px 3px $color2;
     @include texto(satisfy, 72px, bold, left, $color3, none, -1px);
 }
+
 /*Header - final*/
 /*Barra de navegación - inicio*/
 .navbar {
@@ -126,9 +140,8 @@ body {
 /*Carrusel - inicio*/
 
 .carousel {
-    height: auto;
-    width: 75%;
     margin: auto;
+    @include sizes(auto, 75%);
 }
 
 .carousel-inner {
@@ -140,22 +153,19 @@ body {
 
 .carousel-control-prev-icon {
     background-image: url(../media/photos/flecha-izq.png);
-    height: 35px;
-    width: 35px;
+    @include sizes(35px, 35px);
 }
 
 .carousel-control-next-icon {
     background-image: url(../media/photos/flecha-der.png);
-    height: 35px;
-    width: 35px;
+    @include sizes(35px, 35px);
 }
 
 .carousel-indicators li {
     background-color: $color1;
     border-radius: 50%;
-    width: 20px;
-    height: 20px;
     margin: 0 0.4rem;
+    @include sizes(20px, 20px);
 }
 
 .carousel-indicators .active {
@@ -165,11 +175,10 @@ body {
 /*Carrusel - final*/
 
 .parrafosHome {
-    height: auto;
-    width: auto;
     background-color: $color1;
     margin: 35px;
     padding: 30px 50px 30px 50px;
+    @include sizes(auto, auto);
     @include texto(alkatra, 20px, bold, left, $color3, none, 1px);
 }
 
@@ -220,19 +229,17 @@ body {
 }
 
 .imagen {
-    width: 300px;
-    height: auto;
     border-radius: 10px;
     border: $color1 solid 5px;
     margin: auto;
+    @include sizes(auto, 300px);
 }
 
 .detalle {
-    width: auto;
-    height: auto;
     background-color: $color1;
     padding: 10px 20px 10px 20px;
     margin: 40px;
+    @include sizes(auto, auto);
     @include texto(alkatra, 20px, bold, left, $color3, none, 1px);
 }
 
@@ -247,30 +254,32 @@ body {
 }
 
 /*Secciones Nuestros Productos y Nuestro Taller - Final*/
-
-.galeria{
+/*Galeria - inicio*/
+.galeria {
     margin: auto;
     padding: 32px;
 }
 
-.img{
+.img {
     border: $color1 solid 5px;
     border-radius: 10px;
     transition: all 1.0s;
 }
 
-.img:hover{
+.img:hover {
     transform: scale(1.2);
     transition: all 1.0s;
 }
 
+/*Galeria - final*/
+/*Contacto - inicio*/
+
 .mainContacto {
     background-color: $color1;
-    height: auto;
-    width: 50%;
     margin: 40px auto;
     text-align: center;
     padding: 50px;
+    @include sizes(auto, 50%);
 }
 
 .datosPedidos {
@@ -279,7 +288,6 @@ body {
     background-color: $color2;
     margin: 15px 10px 15px 10px;
     padding: 5px;
-    @include flexbox(flex, center, center);
     @include texto(alkatra, 16px, none, center, $color3, none, 0px);
 }
 
@@ -293,12 +301,12 @@ body {
     @include flexbox(flex, center, center);
 }
 
+/*Contacto - final*/
 /*Footer - inicio*/
 .piePagina {
-    height: 100px;
-    width: 100%;
     background-color: $color1;
     margin-top: 10px;
+    @include sizes(100px, 100%);
     @include flexbox(flex, space-between, none);
 }
 
@@ -324,19 +332,19 @@ body {
 
 .logoBottom {
     margin: 0px 2px 2px 250px;
-    height: 98px;
-    width: auto;
     border: $color3 solid 5px;
     border-radius: 49px;
     background-color: $color2;
     padding: 4px;
+    @include sizes(98px, auto);
     @include flexbox(flex, flex-end, center);
 }
+
 /*Footer - final*/
 /*Responsive - inicio*/
 
 //Mixin GRid Responsive
-@mixin gridResponsive{
+@mixin gridResponsive {
     padding: 10px;
     margin-bottom: 10px;
     gap: 10px;
@@ -439,7 +447,7 @@ body {
         padding: 6px;
     }
 
-    .galeria{
+    .galeria {
         padding: 14px;
     }
 
@@ -568,7 +576,7 @@ body {
         padding: 6px;
     }
 
-    .galeria{
+    .galeria {
         padding: 20px;
     }
 
@@ -689,7 +697,7 @@ body {
         padding: 6px;
     }
 
-    .galeria{
+    .galeria {
         padding: 35px;
     }
 

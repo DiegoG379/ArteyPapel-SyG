@@ -14,22 +14,25 @@
   src: url(../media/fonts/Alkatra-VariableFont_wght.ttf);
 }
 body {
-  background-image: url(../media/wallpaper.jpg);
   background-repeat: repeat-y;
   background-size: 100% auto;
+  background-image: url(../media/wallpaperVertical.jpg);
+}
+@media (min-width: 800px) {
+  body {
+    background-image: url(../media/wallpaperHorizontal.jpg);
+  }
 }
 
 /*Header - inicio*/
 .encabezado {
+  background-color: #69dfd2;
   height: 100px;
   width: 100%;
-  background-color: #69dfd2;
 }
 
 .logoTop {
   z-index: 30;
-  height: 194px;
-  width: auto;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -38,6 +41,8 @@ body {
   border-radius: 97px;
   margin: 1px 0px 0px 1px;
   padding: 5px;
+  height: 194px;
+  width: auto;
 }
 
 .nombre {
@@ -110,9 +115,9 @@ body {
 
 /*Carrusel - inicio*/
 .carousel {
+  margin: auto;
   height: auto;
   width: 75%;
-  margin: auto;
 }
 
 .carousel-inner {
@@ -137,9 +142,9 @@ body {
 .carousel-indicators li {
   background-color: #69dfd2;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
   margin: 0 0.4rem;
+  height: 20px;
+  width: 20px;
 }
 
 .carousel-indicators .active {
@@ -148,11 +153,11 @@ body {
 
 /*Carrusel - final*/
 .parrafosHome {
-  height: auto;
-  width: auto;
   background-color: #69dfd2;
   margin: 35px;
   padding: 30px 50px 30px 50px;
+  height: auto;
+  width: auto;
   font-family: alkatra;
   font-size: 20px;
   font-weight: bold;
@@ -228,19 +233,19 @@ body {
 }
 
 .imagen {
-  width: 300px;
-  height: auto;
   border-radius: 10px;
   border: #69dfd2 solid 5px;
   margin: auto;
+  height: auto;
+  width: 300px;
 }
 
 .detalle {
-  width: auto;
-  height: auto;
   background-color: #69dfd2;
   padding: 10px 20px 10px 20px;
   margin: 40px;
+  height: auto;
+  width: auto;
   font-family: alkatra;
   font-size: 20px;
   font-weight: bold;
@@ -267,6 +272,7 @@ body {
 }
 
 /*Secciones Nuestros Productos y Nuestro Taller - Final*/
+/*Galeria - inicio*/
 .galeria {
   margin: auto;
   padding: 32px;
@@ -283,13 +289,15 @@ body {
   transition: all 1s;
 }
 
+/*Galeria - final*/
+/*Contacto - inicio*/
 .mainContacto {
   background-color: #69dfd2;
-  height: auto;
-  width: 50%;
   margin: 40px auto;
   text-align: center;
   padding: 50px;
+  height: auto;
+  width: 50%;
 }
 
 .datosPedidos {
@@ -298,9 +306,6 @@ body {
   background-color: #d1dbdd;
   margin: 15px 10px 15px 10px;
   padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   font-family: alkatra;
   font-size: 16px;
   font-weight: none;
@@ -322,12 +327,13 @@ body {
   align-items: center;
 }
 
+/*Contacto - final*/
 /*Footer - inicio*/
 .piePagina {
-  height: 100px;
-  width: 100%;
   background-color: #69dfd2;
   margin-top: 10px;
+  height: 100px;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: none;
@@ -365,12 +371,12 @@ body {
 
 .logoBottom {
   margin: 0px 2px 2px 250px;
-  height: 98px;
-  width: auto;
   border: black solid 5px;
   border-radius: 49px;
   background-color: #d1dbdd;
   padding: 4px;
+  height: 98px;
+  width: auto;
   display: flex;
   justify-content: flex-end;
   align-items: center;
