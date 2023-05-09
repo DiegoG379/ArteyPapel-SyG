@@ -9,6 +9,20 @@ $color1: #69dfd2;
 $color2: #d1dbdd;
 $color3: black;
 
+//Fuentes
+@font-face {
+    font-family: satisfy;
+    src: url(../media/fonts/Satisfy-Regular.ttf);
+}
+
+@font-face {
+    font-family: alkatra;
+    src: url(../media/fonts/Alkatra-VariableFont_wght.ttf);
+}
+
+$fuente1: satisfy;
+$fuente2: alkatra;
+
 //Mixin Grids
 @mixin grid {
     display: grid;
@@ -26,12 +40,12 @@ $color3: black;
 }
 
 //Mixin tamaños
-@mixin sizes($height, $width){
+@mixin sizes($height, $width) {
     height: $height;
     width: $width;
 }
 
-//Mixin Texto
+//Mixin texto
 @mixin texto($font, $size, $weight, $align, $color, $transform, $spacing) {
     font-family: $font;
     font-size: $size;
@@ -42,28 +56,20 @@ $color3: black;
     letter-spacing: $spacing;
 }
 
-//Fuentes
-@font-face {
-    font-family: satisfy;
-    src: url(../media/fonts/Satisfy-Regular.ttf);
-}
-
-@font-face {
-    font-family: alkatra;
-    src: url(../media/fonts/Alkatra-VariableFont_wght.ttf);
-}
-
-//Cambio de fondo segun ancho de pantalla
+//Cambio de fondo según ancho de pantalla
 $horizontal: url(../media/wallpaperHorizontal.jpg);
 $vertical: url(../media/wallpaperVertical.jpg);
 
 body {
     background-repeat: repeat-y;
     background-size: 100% auto;
-    background-image: $vertical;
 
-    @media (min-width: 800px) {
+    @if (min-width: 800px) {
         background-image: $horizontal;
+    }
+
+    @else {
+        background-image: $vertical;
     }
 }
 
@@ -89,10 +95,9 @@ body {
 .nombre {
     margin-left: 270px;
     text-shadow: 5px 5px 3px $color2;
-    @include texto(satisfy, 72px, bold, left, $color3, none, -1px);
+    @include texto($fuente1, 72px, bold, left, $color3, none, -1px);
 }
 
-/*Header - final*/
 /*Barra de navegación - inicio*/
 .navbar {
     height: 60px;
@@ -108,7 +113,7 @@ body {
     border-radius: 6px;
     border: solid 3px $color3;
     background-color: $color2;
-    @include texto(alkatra, 20px, bold, center, $color3 !important, capitalize, 0px);
+    @include texto($fuente2, 20px, bold, center, $color3 !important, capitalize, 0px);
 }
 
 .nav-link:hover {
@@ -134,11 +139,10 @@ body {
 .titulo {
     margin: auto;
     text-shadow: 10px 0px 7px $color3;
-    @include texto(alkatra, 100px, bold, center, $color1, uppercase, 0px);
+    @include texto($fuente2, 100px, bold, center, $color1, uppercase, 0px);
 }
 
 /*Carrusel - inicio*/
-
 .carousel {
     margin: auto;
     @include sizes(auto, 75%);
@@ -175,11 +179,11 @@ body {
 /*Carrusel - final*/
 
 .parrafosHome {
-    background-color: $color1;
+    background-image: linear-gradient(to bottom right, $color1, $color2);
     margin: 35px;
     padding: 30px 50px 30px 50px;
     @include sizes(auto, auto);
-    @include texto(alkatra, 20px, bold, left, $color3, none, 1px);
+    @include texto($fuente2, 20px, bold, left, $color3, none, 1px);
 }
 
 /*Secciones Nuestros Productos y Nuestro Taller - Inicio*/
@@ -208,7 +212,7 @@ body {
         "detail3 detail3 img3";
 }
 
-//Bucle para crear areas del Grid
+//Bucle para crear áreas del Grid
 
 @for $i from 1 through 4 {
     .img#{$i} {
@@ -229,23 +233,24 @@ body {
 }
 
 .imagen {
+    background-image: linear-gradient(to top left, $color1, $color2);
     border-radius: 10px;
-    border: $color1 solid 5px;
+    padding: 10px;
     margin: auto;
     @include sizes(auto, 300px);
 }
 
 .detalle {
-    background-color: $color1;
+    background-image: linear-gradient(to bottom right, $color1, $color2);
     padding: 10px 20px 10px 20px;
     margin: 40px;
     @include sizes(auto, auto);
-    @include texto(alkatra, 20px, bold, left, $color3, none, 1px);
+    @include texto($fuente2, 20px, bold, left, $color3, none, 1px);
 }
 
 .subtitulo {
     padding: 10px;
-    @include texto(alkatra, 30px, bold, center, $color3, uppercase, opx);
+    @include texto($fuente2, 30px, bold, center, $color3, uppercase, opx);
 }
 
 .linea {
@@ -261,7 +266,8 @@ body {
 }
 
 .img {
-    border: $color1 solid 5px;
+    background-image: linear-gradient(to top left, $color1, $color2);
+    padding: 10px;
     border-radius: 10px;
     transition: all 1.0s;
 }
@@ -288,7 +294,8 @@ body {
     background-color: $color2;
     margin: 15px 10px 15px 10px;
     padding: 5px;
-    @include texto(alkatra, 16px, none, center, $color3, none, 0px);
+    @include texto($fuente2, 16px, none, center, $color3, none, 0px);
+    @include flexbox(flex, center, center);
 }
 
 .datosIngresados {
@@ -313,7 +320,7 @@ body {
 .derechos {
     margin: 0px 0px 15px 15px;
     @include flexbox(flex, left, end);
-    @include texto(alkatra, 18px, bold, center, $color3, none, 0px);
+    @include texto($fuente2, 18px, bold, center, $color3, none, 0px);
 }
 
 .redes {
@@ -328,6 +335,25 @@ body {
 
 .redes a:hover {
     color: $color2;
+    animation: shake 0.50s;
+}
+
+@keyframes shake {
+    10% {
+        transform: rotate(15deg);
+    }
+
+    20% {
+        transform: rotate(-15deg);
+    }
+
+    30% {
+        transform: rotate(15deg);
+    }
+
+    40% {
+        transform: rotate(-15deg);
+    }
 }
 
 .logoBottom {
