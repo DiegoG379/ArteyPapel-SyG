@@ -5,7 +5,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shorcut icon" href="./media/Favicon.png">
+    <meta name="description"
+        content="Empresa de scrapbook que realiza tarjetas de cumpleaños de 15, infantiles y casamiento. También toppers de tortas y cajitas entre otros productos. Ubicados en la ciudad de Río Branco, Cerro Largo, Uruguay. Hacemos envíos a todo Uruguay.">
+    <meta name="keywords"
+        content="scrapbook, papercraft, tarjetas de 15 años, tarjetas de casamiento, toppers para tortas, Rio Branco, Uruguay, artesanal">
+    <link rel="shorcut icon" href="./media/Favicon.webp">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -19,7 +24,9 @@
     <!-- Header -inicio- -->
     <header class="encabezado">
         <aside class="nombre">Arte & Papel S y G</aside>
-        <img class="logoTop" src="./media/Favicon.webp" alt="logo">
+        <a href="#top">
+            <img class="logoTop" src="./media/Favicon.webp" alt="logo">
+        </a>
     </header>
     <!-- Header -final- -->
     <!-- Barra de navegación -inicio- -->
@@ -49,7 +56,7 @@
     </nav>
     <!-- Barra de navegación -final- -->
     <main>
-        <h1 class="titulo">bienvenidos!</h1>
+        <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1200" class="titulo">bienvenidos!</h1>
         <!-- Carrusel - inicio -->
         <section id="demo" class="carousel slide" data-ride="carousel">
             <ul class="carousel-indicators">
@@ -108,7 +115,9 @@
             <a href=""><i class="fa-brands fa-whatsapp"></i></a>
             <a href=""><i class="fa-brands fa-square-facebook"></i></a>
         </div>
-        <img class="logoBottom" src="./media/Favicon.webp" alt="logo">
+        <a href="#top">
+            <img class="logoBottom" src="./media/Favicon.webp" alt="logo">
+        </a>
     </footer>
     <!-- Footer -final- -->
     <!-- Bootstrap 4.6 -inicio- -->
@@ -122,6 +131,12 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
     </script>
     <!-- Bootstrap 4.6 -final- -->
+    <!-- Librería AOS-inicio- -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Librería AOS-final- -->
 </body>
 
 </html>

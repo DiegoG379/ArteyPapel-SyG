@@ -57,7 +57,6 @@ body {
   letter-spacing: -1px;
 }
 
-/*Header - final*/
 /*Barra de navegación - inicio*/
 .navbar {
   height: 60px;
@@ -81,7 +80,6 @@ body {
   text-transform: capitalize;
   letter-spacing: 0px;
 }
-
 .nav-link:hover {
   color: #69dfd2 !important;
   background-color: black;
@@ -284,11 +282,12 @@ body {
   padding: 10px;
   border-radius: 10px;
   transition: all 1s;
+  filter: brightness(85%);
 }
-
 .img:hover {
   transform: scale(1.2);
   transition: all 1s;
+  filter: brightness(105%) saturate(115%);
 }
 
 /*Galeria - final*/
@@ -359,36 +358,20 @@ body {
 }
 
 .redes {
+  z-index: 10;
   font-size: 40px;
   letter-spacing: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 .redes a {
   color: black;
 }
-
 .redes a:hover {
   color: #d1dbdd;
-  animation: shake 0.5s;
 }
 
-@keyframes shake {
-  10% {
-    transform: rotate(15deg);
-  }
-  20% {
-    transform: rotate(-15deg);
-  }
-  30% {
-    transform: rotate(15deg);
-  }
-  40% {
-    transform: rotate(-15deg);
-  }
-}
 .logoBottom {
   margin: 0px 2px 2px 250px;
   border: black solid 5px;
@@ -462,6 +445,7 @@ body {
   }
   .imagen {
     width: 85%;
+    margin-top: 20px;
   }
   .detalle {
     padding: 2px 4px 2px 4px;
@@ -556,6 +540,7 @@ body {
   }
   .imagen {
     width: 65%;
+    margin-top: 20px;
   }
   .detalle {
     padding: 2px 4px 2px 4px;
@@ -649,6 +634,7 @@ body {
   }
   .imagen {
     width: 90%;
+    margin-top: 20px;
   }
   .detalle {
     padding: 2px 4px 2px 4px;

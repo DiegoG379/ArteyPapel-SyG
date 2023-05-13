@@ -114,11 +114,11 @@ body {
     border: solid 3px $color3;
     background-color: $color2;
     @include texto($fuente2, 20px, bold, center, $color3 !important, capitalize, 0px);
-}
 
-.nav-link:hover {
-    color: $color1 !important;
-    background-color: $color3;
+    &:hover {
+        color: $color1 !important;
+        background-color: $color3;
+    }
 }
 
 .navbar-toggler {
@@ -270,11 +270,13 @@ body {
     padding: 10px;
     border-radius: 10px;
     transition: all 1.0s;
-}
+    filter: brightness(85%);
 
-.img:hover {
-    transform: scale(1.2);
-    transition: all 1.0s;
+    &:hover {
+        transform: scale(1.2);
+        transition: all 1.0s;
+        filter: brightness(105%) saturate(115%);
+    }
 }
 
 /*Galeria - final*/
@@ -324,35 +326,17 @@ body {
 }
 
 .redes {
+    z-index: 10;
     font-size: 40px;
     letter-spacing: 20px;
     @include flexbox(flex, center, center);
-}
 
-.redes a {
-    color: $color3;
-}
-
-.redes a:hover {
-    color: $color2;
-    animation: shake 0.50s;
-}
-
-@keyframes shake {
-    10% {
-        transform: rotate(15deg);
+    & a {
+        color: $color3;
     }
 
-    20% {
-        transform: rotate(-15deg);
-    }
-
-    30% {
-        transform: rotate(15deg);
-    }
-
-    40% {
-        transform: rotate(-15deg);
+    & a:hover {
+        color: $color2;
     }
 }
 
@@ -460,6 +444,7 @@ body {
 
     .imagen {
         width: 85%;
+        margin-top: 20px;
     }
 
     .detalle {
@@ -589,6 +574,7 @@ body {
 
     .imagen {
         width: 65%;
+        margin-top: 20px;
     }
 
     .detalle {
@@ -710,6 +696,7 @@ body {
 
     .imagen {
         width: 90%;
+        margin-top: 20px;
     }
 
     .detalle {

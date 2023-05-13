@@ -5,21 +5,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shorcut icon" href="../media/Favicon.png">
+    <meta name="description" content="Galería de los productos que realizamos. Encuentra aquí tarjetas de 15, casamiento, infantiles y toppers de tortas.">
+    <meta name="keywords" content="scrapbook, artesanal, Uruguay, tarjetas de 15 años, tarjetas de casamiento, toppers para tortas, cajitas, infantiles">
+    <link rel="shorcut icon" href="../media/Favicon.webp">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
         integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilos.css">
-    <title>Arte & Papel SyG</title>
+    <title>Galería</title>
 </head>
 
 <body>
     <!-- Header -inicio- -->
     <header class="encabezado">
         <aside class="nombre">Arte & Papel S y G</aside>
-        <img class="logoTop" src="../media/Favicon.webp" alt="logo">
+        <a href="../index.html">
+            <img class="logoTop" src="../media/Favicon.webp" alt="logo">
+        </a>
     </header>
     <!-- Header -final- -->
     <!-- Barra de navegación -inicio- -->
@@ -49,7 +54,7 @@
     </nav>
     <!-- Barra de navegación -final- -->
     <main>
-        <h1 class="titulo">galería</h1>
+        <h1 data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1200" class="titulo">galería</h1>
         <!-- Grid imagenes Bootstrap - inicio -->
         <section class="container-fluid">
             <div class="row">
@@ -101,7 +106,9 @@
             <a href=""><i class="fa-brands fa-whatsapp"></i></a>
             <a href=""><i class="fa-brands fa-square-facebook"></i></a>
         </div>
-        <img class="logoBottom" src="../media/Favicon.webp" alt="logo">
+        <a href="#top">
+            <img class="logoBottom" src="../media/Favicon.webp" alt="logo">
+        </a>
     </footer>
     <!-- Footer -final- -->
     <!-- Bootstrap 4.6 -inicio- -->
@@ -115,6 +122,12 @@
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous">
     </script>
     <!-- Bootstrap 4.6 -final- -->
+    <!-- Librería AOS-inicio- -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <!-- Librería AOS-final- -->
 </body>
 
 </html>
