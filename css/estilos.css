@@ -234,7 +234,8 @@ body {
   background-image: linear-gradient(to top left, #69dfd2, #d1dbdd);
   border-radius: 10px;
   padding: 10px;
-  margin: auto;
+  justify-self: center;
+  align-self: center;
   height: auto;
   width: 300px;
 }
@@ -331,6 +332,29 @@ body {
   align-items: center;
 }
 
+.botonHover:hover {
+  color: #69dfd2 !important;
+  background-color: black;
+  animation: shake 0.5s;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+  75% {
+    transform: translateX(-5px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
 /*Contacto - final*/
 /*Footer - inicio*/
 .piePagina {
@@ -406,9 +430,9 @@ body {
     height: 35px;
   }
   .navbar-toggler {
-    font-size: 10px;
+    font-size: 16px;
     border-radius: 6px;
-    margin: -2px;
+    margin: -5px;
   }
   .titulo {
     margin-top: 10px;
@@ -425,7 +449,7 @@ body {
   .parrafosHome {
     margin: 15px;
     padding: 10px;
-    font-size: 13px;
+    font-size: 16px;
   }
   .gridProductos {
     grid-template-columns: 1fr;
@@ -450,10 +474,10 @@ body {
   .detalle {
     padding: 2px 4px 2px 4px;
     margin: 10px 0px 10px 0px;
-    font-size: 13px;
+    font-size: 16px;
   }
   .subtitulo {
-    font-size: 18px;
+    font-size: 20px;
     padding: 6px;
   }
   .galeria {
@@ -468,8 +492,9 @@ body {
     margin: 0px;
   }
   .derechos {
-    font-size: 8px;
+    font-size: 10px;
     margin: 0px 0px 2px 2px;
+    padding-bottom: 5px;
   }
   .redes {
     letter-spacing: 5px;
@@ -501,9 +526,9 @@ body {
     height: 35px;
   }
   .navbar-toggler {
-    font-size: 10px;
+    font-size: 16px;
     border-radius: 6px;
-    margin: -2px;
+    margin: -5px;
   }
   .titulo {
     margin-top: 10px;
@@ -520,7 +545,7 @@ body {
   .parrafosHome {
     margin: 15px;
     padding: 10px;
-    font-size: 13px;
+    font-size: 16px;
   }
   .gridProductos {
     grid-template-columns: 1fr;
@@ -545,10 +570,10 @@ body {
   .detalle {
     padding: 2px 4px 2px 4px;
     margin: 10px 0px 10px 0px;
-    font-size: 13px;
+    font-size: 16px;
   }
   .subtitulo {
-    font-size: 18px;
+    font-size: 20px;
     padding: 6px;
   }
   .galeria {
@@ -563,8 +588,9 @@ body {
     margin: 0px;
   }
   .derechos {
-    font-size: 8px;
+    font-size: 10px;
     margin: 0px 0px 2px 2px;
+    padding-bottom: 3px;
   }
   .redes {
     letter-spacing: 5px;
@@ -595,9 +621,9 @@ body {
     height: 45px;
   }
   .navbar-toggler {
-    font-size: 10px;
+    font-size: 16px;
     border-radius: 6px;
-    margin: -2px;
+    margin: -4px;
   }
   .titulo {
     margin-top: 10px;
@@ -639,10 +665,10 @@ body {
   .detalle {
     padding: 2px 4px 2px 4px;
     margin: 10px 0px 10px 0px;
-    font-size: 13px;
+    font-size: 16px;
   }
   .subtitulo {
-    font-size: 18px;
+    font-size: 20px;
     padding: 6px;
   }
   .galeria {
@@ -657,8 +683,9 @@ body {
     margin: 0px;
   }
   .derechos {
-    font-size: 12px;
+    font-size: 14px;
     margin: 0px 0px 2px 2px;
+    padding-bottom: 4px;
   }
   .redes {
     letter-spacing: 8px;
