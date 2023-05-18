@@ -1,5 +1,5 @@
-# PreEntrega3Garcia
-Tercera entrega de mi CoderProyecto para el curso de Desarrollo Web. Es un sitio web para una empresa de scrapbooking la cual fundó mi madre y en la cual trabaja desde hace algún tiempo.
+# PFGarcia
+Entrega final de mi CoderProyecto para el curso de Desarrollo Web. Es un sitio web para una empresa de scrapbooking la cual fundó mi madre y en la cual trabaja desde hace algún tiempo.
 # 💫 About Me:
 Tercera entrega de mi CoderProyecto para el curso de Desarrollo Web. Es un sitio web para una empresa de scrapbooking la cual fundó mi madre y en la cual trabaja desde hace algún tiempo.
 
