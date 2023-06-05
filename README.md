@@ -1,4 +1,4 @@
-# PFGarcia
+# Arte&Papel-S&G
 Proyecto de CoderHouse para el curso de Desarrollo Web.
 Este repositorio contiene el código fuente de un sitio web para una empresa de scrapbooking fundada por mi madre y en la que trabaja desde hace algún tiempo.
 # 💫 About Me:
