@@ -16,12 +16,7 @@
 body {
   background-repeat: repeat-y;
   background-size: 100% auto;
-  background-image: url(../media/wallpaperVertical.jpg);
-}
-@media (min-width: 800px) {
-  body {
-    background-image: url(../media/wallpaperHorizontal.jpg);
-  }
+  background-image: url(../media/wallpaperHorizontal.jpg);
 }
 
 /*Header - inicio*/
